@@ -1,6 +1,8 @@
 /* Custom styles to hide number input arrows and ensure font consistency */
         input[type="number"] {
+            -webkit-appearance: textfield;
             -moz-appearance: textfield;
+            appearance: textfield;
         }
         input[type="number"]::-webkit-outer-spin-button,
         input[type="number"]::-webkit-inner-spin-button {
