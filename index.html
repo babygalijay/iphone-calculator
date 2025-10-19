@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen p-4 font-sans">
+
+    <!-- Calculator Body -->
+    <div class="calculator-body w-full">
+        
+        <!-- Display Area -->
+        <div id="display" class="text-white text-right mb-4 flex items-end justify-end">0</div>
+
+        <!-- Button Grid (4 columns, 5 rows) -->
+        <div class="grid grid-cols-4 gap-3">
+            
+            <!-- Row 1 -->
+            <button onclick="handleInput('clear')" class="calc-btn btn-utility">AC</button>
+            <!-- Blank placeholder or other utility buttons could go here -->
+            <div class="col-span-2"></div>
+            <button onclick="handleInput('/')" class="calc-btn btn-operator">&divide;</button>
+
+            <!-- Row 2 -->
+            <button onclick="handleInput('7')" class="calc-btn btn-number">7</button>
+            <button onclick="handleInput('8')" class="calc-btn btn-number">8</button>
+            <button onclick="handleInput('9')" class="calc-btn btn-number">9</button>
+            <button onclick="handleInput('*')" class="calc-btn btn-operator">&times;</button>
+
+            <!-- Row 3 -->
+            <button onclick="handleInput('4')" class="calc-btn btn-number">4</button>
+            <button onclick="handleInput('5')" class="calc-btn btn-number">5</button>
+            <button onclick="handleInput('6')" class="calc-btn btn-number">6</button>
+            <button onclick="handleInput('-')" class="calc-btn btn-operator">&minus;</button>
+
+            <!-- Row 4 -->
+            <button onclick="handleInput('1')" class="calc-btn btn-number">1</button>
+            <button onclick="handleInput('2')" class="calc-btn btn-number">2</button>
+            <button onclick="handleInput('3')" class="calc-btn btn-number">3</button>
+            <button onclick="handleInput('+')" class="calc-btn btn-operator">+</button>
+
+            <!-- Row 5 -->
+            <button onclick="handleInput('0')" class="calc-btn btn-number col-span-2 justify-start pl-6">0</button>
+            <button onclick="handleInput('.')" class="calc-btn btn-number">.</button>
+            <button onclick="handleInput('=')" class="calc-btn btn-operator">=</button>
+        </div>
+        
+    </div>
+ <script src="script.js"></script>
+</body>
+</html>

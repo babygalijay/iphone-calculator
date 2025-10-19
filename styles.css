@@ -1,0 +1,67 @@
+/* Custom styles to hide number input arrows and ensure font consistency */
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Basic calculator body background (mimics device screen) */
+        .calculator-body {
+            background-color: #000000;
+            padding: 1.5rem;
+            max-width: 320px; /* Standard calculator width */
+            border-radius: 2.5rem; /* Highly rounded corners */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Specific button styles for iOS look */
+        .calc-btn {
+            height: 60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            font-weight: 500;
+            border-radius: 9999px; /* Full circle/pill shape */
+            transition: background-color 0.1s ease-out, transform 0.05s ease;
+            user-select: none;
+            cursor: pointer;
+        }
+        
+        .calc-btn:active {
+            filter: brightness(120%);
+            transform: scale(0.98);
+        }
+
+        /* Number Button (Dark Gray) */
+        .btn-number {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        /* Utility Button (Light Gray/AC) */
+        .btn-utility {
+            background-color: #a6a6a6;
+            color: #000000;
+        }
+
+        /* Operator Button (Orange) */
+        .btn-operator {
+            background-color: #ff9f0a;
+            color: #ffffff;
+        }
+        
+        /* Display Text */
+        #display {
+            min-height: 80px;
+            padding: 10px 15px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: clip;
+            font-size: 5rem;
+            line-height: 1;
+        }
